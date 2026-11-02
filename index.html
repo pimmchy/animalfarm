@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Animal Farm | นิทานสัตว์ที่สะเทือนโลกมนุษย์ - Page & Moon</title>
+    <meta name="description"
+        content="เว็บรีวิวหนังสือที่จะพาคุณไปเจาะลึก Animal Farm (การเมืองเรื่องสรรพสัตว์) นวนิยายผลงานของ George Orwell สำรวจบทวิเคราะห์ ตัวละคร และข้อมูลบรรณานุกรมครบถ้วน">
+    <meta name="keywords"
+        content="Animal Farm,แอนิมอลฟาร์ม,วรรณกรรมดิสโทเปีย,รีวิวหนังสือ,George Orwell,วรรณกรรมเสียดสีการเมือง,นวนิยายเสียดสีการเมือง,รีวิวหนังสือ Animal Farm,การเมืองเรื่องสรรพสัตว์,วรรณกรรมคลาสสิค">
+    <script>document.documentElement.classList.add('js')</script>
+
+    <!-- ฟอนต์ Google Fonts ปลอดภัยไร้ปัญหาลิขสิทธิ์ (OFL) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Prompt:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- แถบนำทาง Header -->
+    <header>
+        <div class="w bar">
+            <a class="logo-brand" href="#top">
+                <div class="brand-logo-frame">
+                    <!-- เปลี่ยนชื่อไฟล์รูปภาพตรงนี้เป็น images/pig.png -->
+                    <img src="images/pig.png" alt="Page & Moon Logo"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
+                    <span class="logo-placeholder" style="display:none;">📖</span>
+                </div>
+                <span class="brand-text">Page & Moon</span>
+            </a>
+
+            <!-- ...ส่วนเมนูนำทางที่เหลือ... -->
+
+            <nav id="menu" aria-label="เมนูหลัก">
+                <ul class="nav-links">
+                    <li><a href="#book-section">หนังสือ & ผู้แต่ง</a></li>
+                    <li><a href="#stages">5 กลยุทธ์ยึดอำนาจ</a></li>
+                    <li><a href="#characters">ตัวละคร & สัญลักษณ์</a></li>
+                    <li><a href="#takeaways">3 ประเด็นน่าอ่าน</a></li>
+                    <li><a href="#bibliography">ข้อมูลบรรณานุกรม</a></li>
+                </ul>
+                <div class="mobile-menu-actions">
+                    <a href="#book-section" class="btn-cta">เริ่มต้นสำรวจ</a>
+                </div>
+            </nav>
+
+            <div class="desktop-nav-actions">
+                <a href="#book-section" class="btn-cta">เริ่มต้นสำรวจ</a>
+            </div>
+
+            <button class="menu-toggle-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu"
+                aria-label="เปิดเมนูนำทาง">
+                <span class="bar-line"></span>
+                <span class="bar-line"></span>
+                <span class="bar-line"></span>
+            </button>
+        </div>
+
+        <div id="prog"></div>
+    </header>
+
+    <main id="top">
+        <!-- HERO SECTION: "From Equality to Tyranny" Interactive Experience (ปรับระยะห่าง Header แล้ว) -->
+        <section class="hero-interactive" id="heroInteractive">
+            <div class="hero-noise-overlay" aria-hidden="true"></div>
+            <div class="windmill-shadow-container" aria-hidden="true">
+                <svg class="windmill-svg" viewBox="0 0 200 200" fill="currentColor">
+                    <polygon points="90,190 110,190 105,90 95,90" opacity="0.35" />
+                    <g class="windmill-blades">
+                        <polygon points="100,90 96,15 104,15" />
+                        <polygon points="100,90 175,86 175,94" />
+                        <polygon points="100,90 104,165 96,165" />
+                        <polygon points="100,90 25,94 25,86" />
+                        <circle cx="100" cy="90" r="6" />
+                    </g>
+                </svg>
+            </div>
+
+            <div class="hero-sticky-viewport">
+                <div class="w hero-interactive-content">
+                    <div class="hero-headline-group" id="headlineGroup">
+                        <span class="cine-pill-dark">THE REVOLUTION FALLS</span>
+
+                        <h1 class="equality-title" id="equalityHeadline">
+                            <span class="headline-left">ALL ANIMALS ARE </span>
+                            <span class="word-equal-wrap">
+                                <span class="word-equal">EQUAL.</span>
+                                <span class="strike-line" id="strikeLine"></span>
+                            </span>
+                            <span class="tyranny-reveal" id="tyrannyReveal">
+                                <span class="typewriter-text" id="typewriterText"></span>
+                                <span class="typewriter-cursor" id="typewriterCursor" style="display:none;">|</span>
+                            </span>
+                        </h1>
+
+                        <p class="hero-subtext">
+                            วรรณกรรมดิสโทเปียเสียดสีการเมืองระดับตำนาน ที่เตือนสติเราเรื่องอำนาจและการล้างสมองมากว่า 80
+                            ปี
+                        </p>
+                    </div>
+
+                    <div class="hero-book-showcase" id="bookShowcaseStage">
+                        <div class="spotlight-cone" id="spotlightCone" aria-hidden="true"></div>
+
+                        <div class="book-3d-stage">
+                            <div class="book-3d-object" id="book3d">
+                                <div class="book-spine"></div>
+                                <div class="book-back-cover"></div>
+
+                                <div class="book-inner-page">
+                                    <div class="page-header">CHAPTER I</div>
+                                    <div class="page-illustration">
+                                        <img src="images/hero-bg.jpg" alt="ภาพประกอบบทที่ 1"
+                                            onerror="this.style.display='none'">
+                                    </div>
+                                    <p class="page-quote">
+                                        “Mr. Jones, of the Manor Farm, had locked the hen-houses for the night, but was
+                                        too drunk to remember to shut the pop-holes...”
+                                    </p>
+                                    <span class="page-number">1</span>
+                                </div>
+
+                                <div class="book-front-cover" id="frontCover">
+                                    <div class="front-cover-face">
+                                        <img src="images/book-cover.png" alt="หน้าปก Animal Farm"
+                                            class="front-cover-img" onerror="this.style.display='none'">
+                                        <div class="front-cover-fallback">
+                                            <span>ANIMAL FARM</span>
+                                            <small>GEORGE ORWELL</small>
+                                        </div>
+                                        <div class="cover-crease"></div>
+                                    </div>
+                                    <div class="front-cover-back">
+                                        <div class="ex-libris">EX LIBRIS<br>MANOR FARM</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="scroll-instruction" id="scrollInstruction">
+                            <span>เลื่อนลงเพื่อเปิดอ่านหน้าแรก</span>
+                            <div class="scroll-dash"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- แถบเฟดสีดำไล่ระดับเข้าสู่ Section ถัดไป (แทนที่ข้อความวิ่งเดิม) -->
+        <div class="hero-bottom-fade" aria-hidden="true"></div>
+
+        <!-- ส่วนที่ 1: ABOUT THE BOOK & AUTHOR (อัปเดตบทบรรยายใหม่และข้อมูลช่วยตัดสินใจอ่าน) -->
+        <section id="book-section" class="sec-light">
+            <div class="w">
+                <div class="book-showcase-grid rv">
+                    <div class="book-cover-wrapper">
+                        <div class="book-frame">
+                            <img src="images/book-cover.png" alt="ปกหนังสือ Animal Farm" class="book-img"
+                                onerror="this.nextElementSibling.style.display='grid'; this.style.display='none';">
+                            <div class="ph-box" style="display:none; height:420px;">
+                                <span>🖼️ วางรูปภาพ <code>images/book-cover.png</code></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-info-col">
+                        <span class="cine-pill">ABOUT THE BOOK & AUTHOR</span>
+                        <h2>แอนิมอล ฟาร์ม (Animal Farm)</h2>
+                        <h3 class="book-sub-heading">เมื่อฟาร์มของสัตว์ กลายเป็นภาพสะท้อนของอำนาจและสังคมมนุษย์</h3>
+
+                        <p class="book-lead-text">
+                            ถ้าวันหนึ่งสัตว์ในฟาร์มโค่นเจ้าของลงได้ แล้วสร้างสังคมที่ "ทุกตัวเท่าเทียมกัน"
+                            ขึ้นมาเอง เรื่องจะจบสวยอย่างที่หวังไหม?
+                        </p>
+                        <p class="book-lead-text">
+                            <strong><em>Animal Farm</em></strong> ของ จอร์จ ออร์เวลล์ (George Orwell)
+                            ตีพิมพ์ครั้งแรกในปี 1945
+                            เล่าเรื่องการลุกขึ้นสู้ของเหล่าสัตว์ แต่เมื่อเวลาผ่านไป ผู้ถืออำนาจก็เริ่มเขียนกฎใหม่
+                            ตีความความจริงตามใจ และกำหนดว่าใครควรเชื่ออะไร
+
+
+                        </p>
+                        <p class="book-lead-text">
+                            นิทานเล่มบางที่อ่านง่าย แต่พูดถึง <strong>อำนาจ การเมือง
+                                และธรรมชาติของมนุษย์</strong>ได้เฉียบคม และ 80
+                            ปีผ่านไป ก็ยังร่วมสมัยอย่างน่าตกใจ
+                        </p>
+
+                        <div class="author-snippet">
+                            <div class="author-avatar">
+                                <img src="images/george-orwell.jpg" alt="George Orwell"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                                <div class="ph-box" style="display:none; width:65px; height:65px; border-radius:50%;">👤
+                                </div>
+                            </div>
+                            <div class="author-snippet-text">
+                                <b>George Orwell (1903–1950)</b>
+                                <p>นักเขียนชาวอังกฤษผู้มีชื่อเสียงจากงานเขียนที่ตั้งคำถามต่ออำนาจ การควบคุมสังคม
+                                    และเสรีภาพของมนุษย์ ผลงานสำคัญของเขา ได้แก่ <em>Animal Farm</em> และ <em>1984</em>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- ข้อมูลช่วยตัดสินใจอ่าน -->
+                        <div class="reading-decision-grid">
+                            <div class="decision-card">
+                                <span class="d-highlight">1945</span>
+                                <b class="d-title">ปีที่ตีพิมพ์ครั้งแรก</b>
+                                <p class="d-desc">เรื่องราวสะท้อนประวัติศาสตร์ที่ยังคมชัดและร่วมสมัยจนถึงปัจจุบัน</p>
+                            </div>
+                            <div class="reading-decision-card">
+                                <div class="decision-card">
+                                    <span class="d-reading">อ่านไม่ยาว</span>
+                                    <b class="d-title">เรื่องกระชับ จบไว</b>
+                                    <p class="d-desc">เหมาะทั้งสำหรับผู้เริ่มอ่านวรรณกรรมและผู้ที่สนใจประเด็นสังคม</p>
+                                </div>
+                            </div>
+                            <div class="decision-card">
+                                <span class="d-reading">คลาสสิก</span>
+                                <b class="d-title">วรรณกรรมทรงคุณค่า</b>
+                                <p class="d-desc">หนังสือที่ได้รับการอ่านและพูดถึงอย่างต่อเนื่องทั่วโลก</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ส่วนที่ 2: 5 กลยุทธ์ยึดอำนาจ (Section สลับสี: Warm) -->
+        <section id="stages" class="sec-warm">
+            <div class="w">
+                <div class="sec-head text-center">
+                    <span class="cine-pill">THE 5 STAGES OF CORRUPTION</span>
+                    <h2 class="rv">5 ขั้นที่ทำให้ความหวังกลายเป็นเผด็จการ</h2>
+
+                </div>
+
+                <div class="stages-container">
+                    <!-- กลยุทธ์ที่ 1 -->
+                    <article class="stage-block rv" tabindex="0">
+                        <div class="stage-img-box">
+                            <img src="images/stage-1.jpg" alt="การปฏิวัติของเหล่าสัตว์"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                            <div class="ph-box stage-fallback" style="display:none;">
+                                <span>🖼️ รูปขั้นที่ 1<br><code>stage-1.jpg</code></span>
+                            </div>
+                            <span class="stage-num-tag">STEP 01</span>
+                        </div>
+                        <div class="stage-info">
+                            <div class="stage-header">
+                                <h3>1. เริ่มด้วยอุดมคติสวยหรู</h3>
+                                <span class="stage-hint-icon">▾</span>
+                            </div>
+                            <div class="stage-expand-content">
+                                <p>สัตว์ทั้งฟาร์มร่วมใจไล่นายโจนส์ เจ้าของฟาร์มขี้เมา แล้วเขียนกฎ 7 ข้อไว้บนผนังโรงนา
+                                    เพื่อสัญญาว่าจะไม่มีใครกดขี่กันอีก
+                                </p>
+                                <div class="stage-dialogue">
+                                    <span class="d-label">คำพูดที่ใช้กล่อม:</span>
+                                    <span class="d-text">"สองขาคือศัตรู สี่ขาหรือมีปีกคือมิตร
+                                        สัตว์ทุกตัวเท่าเทียมกัน!"</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- กลยุทธ์ที่ 2 -->
+                    <article class="stage-block rv" style="--d:.1s" tabindex="0">
+                        <div class="stage-img-box">
+                            <img src="images/stage-2.jpg" alt="การกักตุนอาหารของพวกหมู"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                            <div class="ph-box stage-fallback" style="display:none;">
+                                <span>🖼️ รูปขั้นที่ 2<br><code>stage-2.jpg</code></span>
+                            </div>
+                            <span class="stage-num-tag">STEP 02</span>
+                        </div>
+                        <div class="stage-info">
+                            <div class="stage-header">
+                                <h3>2. อ้างว่า "ฉลาดกว่า" เพื่อสร้างอภิสิทธิ์แรก</h3>
+                                <span class="stage-hint-icon">▾</span>
+                            </div>
+                            <div class="stage-expand-content">
+                                <p>นมสดและแอปเปิลถูกแอบเก็บไว้ให้หมูกินกลุ่มเดียว โดยอ้างว่าต้องใช้สมองบริหารฟาร์ม
+                                    ถ้าขาดอาหาร ฟาร์มจะล่มสลาย</p>
+                                <div class="stage-dialogue">
+                                    <span class="d-label">คำพูดที่ใช้กล่อม:</span>
+                                    <span class="d-text">“พวกเราไม่ได้กินเพราะชอบ แต่กินเพื่อพวกเจ้า
+                                        ไม่อย่างนั้นนายโจนส์จะกลับมานะ!”</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- กลยุทธ์ที่ 3 -->
+                    <article class="stage-block rv" style="--d:.2s" tabindex="0">
+                        <div class="stage-img-box">
+                            <img src="images/stage-3.jpeg" alt="การกำจัดคู่แข่งทางการเมือง"
+                                onerror="if(!this.dataset.tried){this.dataset.tried='true'; this.src='images/stage-3.jpg';}else{this.style.display='none'; this.nextElementSibling.style.display='grid';}">
+                            <div class="ph-box stage-fallback" style="display:none;">
+                                <span>🖼️ รูปขั้นที่ 3<br><code>stage-3.jpeg</code></span>
+                            </div>
+                            <span class="stage-num-tag">STEP 03</span>
+                        </div>
+                        <div class="stage-info">
+                            <div class="stage-header">
+                                <h3>3. ใช้กำลังกำจัดคนเห็นต่าง</h3>
+                                <span class="stage-hint-icon">▾</span>
+                            </div>
+                            <div class="stage-expand-content">
+                                <p>นโปเลียนปล่อยฝูงหมาที่แอบเลี้ยงไว้ไล่สโนว์บอล หมูนักวางแผน ออกจากฟาร์ม
+                                    ยกเลิกการประชุมโหวต แล้วตั้งตนเป็นผู้นำเบ็ดเสร็จที่ไม่มีใครตรวจสอบได้</p>
+                                <div class="stage-dialogue">
+                                    <span class="d-label">คำพูดที่ใช้กล่อม:</span>
+                                    <span class="d-text">“การโหวตลงคะแนนมีแต่จะสร้างความแตกแยก
+                                        เชื่อมั่นในการนำของท่านนโปเลียนเถิด”</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- กลยุทธ์ที่ 4 -->
+                    <article class="stage-block rv" style="--d:.3s" tabindex="0">
+                        <div class="stage-img-box">
+                            <img src="images/stage-4.jpg" alt="การแก้กฎหมายและสำเร็จโทษ"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                            <div class="ph-box stage-fallback" style="display:none;">
+                                <span>🖼️ รูปขั้นที่ 4<br><code>stage-4.jpg</code></span>
+                            </div>
+                            <span class="stage-num-tag">STEP 04</span>
+                        </div>
+                        <div class="stage-info">
+                            <div class="stage-header">
+                                <h3>4. แอบแก้กฎ แล้วทำให้ทุกคนสงสัยความจำตัวเอง</h3>
+                                <span class="stage-hint-icon">▾</span>
+                            </div>
+                            <div class="stage-expand-content">
+                                <p>หมูย้ายไปนอนบนเตียง ดื่มเหล้า และลงโทษสัตว์อื่นจนตาย เมื่อมีคนท้วง
+                                    กฎบนผนังก็ถูกแอบเติมคำใหม่ ใครจำฉบับเดิมได้จะถูกหาว่า "จำผิดและเป็นกบฏ"
+                                </p>
+                                <div class="stage-dialogue">
+                                    <span class="d-label">คำพูดที่ใช้กล่อม:</span>
+                                    <span class="d-text">“กฎบอกว่าห้ามนอนบนเตียงที่มีผ้าปูต่างหาก
+                                        เจ้าความจำเสื่อมไปเองหรือเปล่า?”</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- กลยุทธ์ที่ 5 -->
+                    <article class="stage-block fatal rv" style="--d:.4s" tabindex="0">
+                        <div class="stage-img-box">
+                            <img src="images/stage-5.jpeg" alt="หมูยืนสองขาและถือแส้"
+                                onerror="if(!this.dataset.tried){this.dataset.tried='true'; this.src='images/stage-5.jpg';}else{this.style.display='none'; this.nextElementSibling.style.display='grid';}">
+                            <div class="ph-box stage-fallback" style="display:none;">
+                                <span>🖼️ รูปขั้นที่ 5<br><code>stage-5.jpeg</code></span>
+                            </div>
+                            <span class="stage-num-tag fatal">FINALE</span>
+                        </div>
+                        <div class="stage-info">
+                            <div class="stage-header">
+                                <h3>5. กลายเป็นสิ่งที่เคยลุกขึ้นสู้</h3>
+                                <span class="stage-hint-icon">▾</span>
+                            </div>
+                            <div class="stage-expand-content">
+                                <p>หมูหัดเดินสองขา สวมเสื้อผ้า ถือแส้คุมแรงงาน ม้าผู้ซื่อสัตย์ถูกส่งไปโรงเชือด
+                                    ฉากจบคือหมูนั่งชนแก้วกับมนุษย์ จนสัตว์อื่นที่แอบมองผ่านหน้าต่างแยกไม่ออกว่าใครคือคน
+                                    ใครคือหมู</p>
+                                <div class="stage-dialogue fatal">
+                                    <span class="d-label">กฎข้อสุดท้ายบนผนัง:</span>
+                                    <span class="d-text">“สัตว์ทุกตัวเท่าเทียมกัน
+                                        แต่สัตว์บางตัวเท่าเทียมกว่าตัวอื่น”</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ส่วนที่ 3: ตัวละครแบบ Spotlight Panel (Section สลับสี: Light) -->
+        <section id="characters" class="sec-light">
+            <div class="w">
+                <div class="sec-head text-center">
+                    <span class="cine-pill">THE CAST & ALLEGORY</span>
+                    <h2 class="rv">ตัวละครสำคัญ: กระจกสะท้อนมนุษย์ในสังคม</h2>
+
+                </div>
+
+                <div class="spotlight-wrapper rv">
+                    <div class="avatar-strip" id="avatarStrip"></div>
+
+                    <div class="spotlight-panel" id="spotlightPanel">
+                        <div class="spotlight-media">
+                            <img id="spotlightImg" src="" alt="" class="spotlight-img">
+                            <div class="spotlight-allegory-tag" id="spotlightAllegory"></div>
+                        </div>
+                        <div class="spotlight-info">
+                            <span class="spotlight-role-badge" id="spotlightRole"></span>
+                            <h3 class="spotlight-name" id="spotlightName"></h3>
+                            <p class="spotlight-desc" id="spotlightDesc"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ส่วนที่ 4: 3 ประเด็นที่ทำให้ Animal Farm ยังน่าอ่านในวันนี้ (อัปเดตใหม่) -->
+        <section id="takeaways" class="sec-warm">
+            <div class="w">
+                <div class="sec-head text-center">
+                    <span class="cine-pill">WHY READ ANIMAL FARM TODAY</span>
+                    <h2 class="rv">3 เหตุผลที่ Animal Farm ยังน่าอ่านในวันนี้</h2>
+                    <p class="rv mu" style="--d:.1s">หนังสือที่ชวนเราตั้งคำถามกับอำนาจ ความจริง และความเท่าเทียม</p>
+                </div>
+
+                <div class="takeaways-grid">
+                    <div class="takeaway-card rv">
+                        <div class="icon-wrap">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                                <line x1="12" y1="19" x2="12" y2="23" />
+                                <line x1="8" y1="23" x2="16" y2="23" />
+                            </svg>
+                        </div>
+                        <h3>1. ใครกำหนดความหมายของคำ คนนั้นกำหนดความจริงได้</h3>
+                        <p>
+                            คำธรรมดาอย่าง "ความเท่าเทียม" หรือ "ความยุติธรรม" เปลี่ยนความหมายได้ทันที
+                            ถ้าผู้มีอำนาจเป็นคนบอกว่าอะไรคือความจริง <em>Animal Farm</em>
+                            ทำให้เห็นว่าภาษาไม่ได้มีไว้แค่สื่อสาร
+                            แต่ใช้โน้มน้าวและควบคุมความคิดคนได้ด้วย
+                        </p>
+                    </div>
+
+                    <div class="takeaway-card rv" style="--d:.15s">
+                        <div class="icon-wrap">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="8" x2="12" y2="12" />
+                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                            </svg>
+                        </div>
+                        <h3>2. ภักดีโดยไม่ถาม อาจกลายเป็นแค่เครื่องมือ</h3>
+                        <p>
+                            บางตัวละครเชื่อมั่น ทำงานหนัก และยอมเสียสละเพื่อส่วนรวม แต่ไม่เคยตั้งคำถามกับสิ่งที่ผู้นำพูด
+                            หนังสือเล่มนี้ชวนคิดว่า ความซื่อสัตย์เป็นสิ่งดี แต่ต้องเดินคู่กับการคิดและตรวจสอบเสมอ
+                        </p>
+                    </div>
+
+                    <div class="takeaway-card rv" style="--d:.3s">
+                        <div class="icon-wrap">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <h3>3. อำนาจที่ไม่มีใครตรวจสอบ เปลี่ยนอุดมการณ์ได้</h3>
+                        <p>
+                            ฟาร์มเริ่มจากความฝันเรื่องเสรีภาพและความเท่าเทียม แต่เมื่ออำนาจไปรวมอยู่ในมือคนกลุ่มเดียว
+                            สิ่งที่เคยสู้เพื่อเปลี่ยนแปลงก็ย้อนกลับมาในรูปใหม่ นี่คือเหตุผลที่เรื่องจากปี 1945
+                            ยังทำให้เราตั้งคำถามกับสังคมทุกวันนี้
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ส่วนที่ 5: Reflection Card (Section สลับสี: Light) -->
+        <!-- ส่วน: BEFORE YOU READ (Accordion 4 คำถามสำหรับผู้อ่าน) -->
+        <section id="before-you-read" class="sec-dark before-read-section">
+            <div class="w">
+                <div class="sec-head text-center">
+                    <span class="cine-pill">BEFORE YOU READ</span>
+                    <h2 class="rv">คำถามควรรู้ก่อนเริ่มอ่าน</h2>
+                    <p class="rv mu" style="--d:.1s">ไขข้อข้องใจและเตรียมความพร้อมก่อนก้าวเข้าสู่ฟาร์มของผองสัตว์</p>
+                </div>
+
+                <div class="accordion-container rv" style="--d:.2s">
+                    <!-- ข้อที่ 1 -->
+                    <div class="accordion-item active">
+                        <button class="accordion-header" aria-expanded="true">
+                            <span class="acc-q-number">01</span>
+                            <span class="acc-q-title">หนังสือเกี่ยวกับเรื่องอะไร?</span>
+                            <span class="acc-icon">+</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                เรื่องราวของเหล่าสัตว์ในฟาร์มที่รวมตัวกันปฏิวัติขับไล่มนุษย์เจ้าของฟาร์มผู้กดขี่
+                                เพื่อสร้างสังคมใหม่ที่ "สัตว์ทุกตัวเท่าเทียมกัน" แต่เมื่อเวลาผ่านไป
+                                ผู้นำฝ่ายสัตว์กลับเริ่มแสวงหาอำนาจ เขียนกฎใหม่ และกลายเป็นผู้กดขี่เสียเอง
+                                ซึ่งเป็นภาพสะท้อนและวรรณกรรมเสียดสีการเมืองรวมถึงระบอบเผด็จการได้อย่างเฉียบคม
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ข้อที่ 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span class="acc-q-number">02</span>
+                            <span class="acc-q-title">เหมาะกับใคร?</span>
+                            <span class="acc-icon">+</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                เหมาะสำหรับนักอ่านทุกระดับ ไม่ว่าจะเป็นผู้ที่เริ่มต้นอ่านวรรณกรรมคลาสสิก
+                                ผู้ที่สนใจเรื่องการเมือง สังคมศาสตร์ พฤติกรรมมนุษย์
+                                หรือแม้แต่นักอ่านทั่วไปที่มองหานิทานเปรียบเทียบที่อ่านสนุก ตื่นเต้น
+                                และชวนให้คิดตามในทุกๆ บท
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ข้อที่ 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span class="acc-q-number">03</span>
+                            <span class="acc-q-title">ต้องมีพื้นฐานประวัติศาสตร์หรือการเมืองหรือไม่?</span>
+                            <span class="acc-icon">+</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <strong>ไม่จำเป็นต้องมีพื้นฐานมาก่อน</strong> ตัวเล่มถูกเล่าในรูปแบบนิทานเปรียบเทียบ
+                                (Allegory) ที่เข้าใจง่ายและมีชั้นเชิงในตัวเอง
+                                แต่หากมีความรู้พื้นฐานเกี่ยวกับประวัติศาสตร์การปฏิวัติรัสเซียหรือระบอบการปกครอง
+                                ก็จะยิ่งช่วยเพิ่มความเพลิดเพลินและมองเห็นสัญลักษณ์ที่ซ่อนอยู่ได้ลึกซึ้งยิ่งขึ้น
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ข้อที่ 4 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span class="acc-q-number">04</span>
+                            <span class="acc-q-title">อ่านจบแล้วจะได้ประโยชน์อะไร?</span>
+                            <span class="acc-icon">+</span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                ได้ฝึกทักษะการคิดวิเคราะห์อย่างมีวิจารณญาณ (Critical Thinking)
+                                ตระหนักรู้ถึงกลไกการใช้อำนาจ การโฆษณาชวนเชื่อ และการบิดเบือนความจริงในสังคม
+                                รวมถึงได้เสพเสน่ห์ของวรรณกรรมระดับโลกที่ยังคงทันสมัยและร่วมสมัยแม้วันเวลาจะผ่านไปหลายทศวรรษ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-spacer"></div>
+        </section>
+
+        <!-- ส่วนที่ 6: ข้อมูลทางบรรณานุกรม (จัดเลย์เอาต์ใหม่ ซ้าย-ขวา) -->
+        <section id="bibliography" class="sec-warm bibliography-section">
+            <div class="w">
+                <div class="sec-head text-center">
+                    <span class="cine-pill">BIBLIOGRAPHIC RECORD</span>
+                    <h2 class="rv">ข้อมูลทางบรรณานุกรม</h2>
+                </div>
+
+                <div class="biblio-grid-layout rv">
+                    <!-- ฝั่งซ้าย: รูปปกหนังสือเอียงธรรมชาติ + เงาฟุ้งแบบ 3D -->
+                    <div class="biblio-cover-col">
+                        <div class="biblio-book-stage">
+                            <div class="biblio-book-shadow"></div>
+                            <div class="biblio-book-frame">
+                                <img src="images/book-cover.png" alt="ปกหนังสือ Animal Farm ฉบับภาษาไทย"
+                                    class="biblio-book-img"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                                <div class="ph-box" style="display:none; height:360px;">
+                                    <span>🖼️ ปกหนังสือ<br><code>images/book-cover.png</code></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ฝั่งขวา: การ์ดตารางข้อมูลบรรณานุกรม CIP -->
+                    <div class="biblio-card-col">
+                        <div class="biblio-card">
+                            <div class="biblio-card-header">
+                                <span class="biblio-card-title">ข้อมูลบรรณานุกรมของหนังสือ (CIP Data)</span>
+                                <span class="biblio-lang-badge">ฉบับภาษาไทย</span>
+                            </div>
+
+                            <div class="biblio-table">
+                                <div class="biblio-row">
+                                    <span class="biblio-label">ชื่อเรื่อง:</span>
+                                    <span class="biblio-value"><strong>แอนิมอล ฟาร์ม :
+                                            การเมืองเรื่องสรรพสัตว์</strong></span>
+                                </div>
+                                <div class="biblio-row">
+                                    <span class="biblio-label">ชื่อเรื่องเดิม:</span>
+                                    <span class="biblio-value"><em>Animal Farm: A Fairy Story</em></span>
+                                </div>
+                                <div class="biblio-row">
+                                    <span class="biblio-label">ผู้เขียน:</span>
+                                    <span class="biblio-value">จอร์จ ออร์เวลล์ (George Orwell)</span>
+                                </div>
+                                <div class="biblio-row">
+                                    <span class="biblio-label">ผู้แปล:</span>
+                                    <span class="biblio-value">สรวงอัปสร กสิกรานันท์</span>
+                                </div>
+                                <div class="biblio-row">
+                                    <span class="biblio-label">การพิมพ์:</span>
+                                    <span class="biblio-value">พิมพ์ พ.ศ. 2564</span>
+                                </div>
+                                <div class="biblio-row">
+                                    <span class="biblio-label">สำนักพิมพ์:</span>
+                                    <span class="biblio-value">สำนักพิมพ์แอร์โรว์ (Arrow Publishing)</span>
+                                </div>
+                                <div class="biblio-row">
+                                    <span class="biblio-label">ขนาดรูปเล่ม:</span>
+                                    <span class="biblio-value">184 หน้า</span>
+                                </div>
+                                <div class="biblio-row biblio-row-highlight">
+                                    <span class="biblio-label">ISBN:</span>
+                                    <span class="biblio-value biblio-isbn">978-434-238-5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER พร้อมปุ่มเปิด Modal ที่มาของภาพประกอบ -->
+    <footer>
+        <div class="w footer-bar">
+            <p class="footer-copy">© 2026 Page & Moon | Animal Farm (1945) โดย George Orwell
+                เพื่อการศึกษาและส่งเสริมการคิดเชิงวิพากษ์</p>
+            <div class="footer-links">
+                <a href="#top" class="footer-link">กลับขึ้นด้านบน</a>
+                <span class="footer-dot">•</span>
+                <button type="button" class="footer-btn-link" id="openCreditsBtn">ที่มาของภาพประกอบ (Image
+                    Credits)</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- POPUP / MODAL: ที่มาของภาพประกอบ (Image Credits & Attributions) -->
+    <div class="modal-backdrop" id="creditsModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
+        style="display:none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-icon">🎨</span>
+                    <h3 id="modalTitle">ที่มาของภาพประกอบ (Image Credits)</h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="closeCreditsBtn" aria-label="ปิดหน้าต่าง">✕</button>
+            </div>
+
+            <div class="modal-body">
+                <p class="modal-intro">
+                    ภาพประกอบทั้งหมดที่ใช้บนเว็บไซต์นี้จัดทำขึ้นเพื่อการศึกษาและการวิจารณ์วรรณกรรมโดยไม่แสวงหาผลกำไร:
+                </p>
+
+                <ul class="credit-list">
+                    <li class="credit-item">
+                        <b>1. รูปของ Benjamin:</b>
+                        <p>Baamboozle. (ม.ป.ป.). <em>Animal farm characters</em>. <a
+                                href="https://www.baamboozle.com/study/137781"
+                                target="_blank">https://www.baamboozle.com/study/137781</a>
+                        </p>
+                    </li>
+                    <li class="credit-item">
+                        <b>2. รูปใน Stage 3:</b>
+                        <p>Fandom. (ม.ป.ป.). Dogs <em>(Animal Farm)/Gallery</em>. Villains Wiki.
+                            <a href="https://villains.fandom.com/wiki/Dogs_(Animal_Farm)/Gallery"
+                                target="_blank">https://villains.fandom.com/wiki/Dogs_(Animal_Farm)/Gallery</a>
+                        </p>
+                    </li>
+                    <li class="credit-item">
+                        <b>3. รูปของ Napoleon:</b>
+                        <p>Animal Farm characters. (ม.ป.ป.). <em>Animal Farm</em>.
+                            <a href="https://www.animal.farm/category/animal-farm-characters/"
+                                target="_blank">https://www.animal.farm/category/animal-farm-characters/</a>
+                        </p>
+                    </li>
+                    <li class="credit-item">
+                        <b>4. รูปของ Snowball:</b>
+                        <p>Fandom. (ม.ป.ป.). <em>Snowball</em>. Animal Farm Wiki.
+                            <a href="https://animalfarm.fandom.com/wiki/Snowball"
+                                target="_blank">https://animalfarm.fandom.com/wiki/Snowball</a>
+                        </p>
+                    </li>
+                    <li class="credit-item">
+                        <b>5. รูปของ Boxer:</b>
+                        <p>Pinterest. (ม.ป.ป.). <em>Boxer (Animal Farm) [ภาพ]</em>.
+                            <a href="https://es.pinterest.com/pin/761671355748353366/"
+                                target="_blank">https://es.pinterest.com/pin/761671355748353366/</a>
+                        </p>
+                    </li>
+                    <li class="credit-item">
+                        <b>6. รูปใน Stage 4:</b>
+                        <p>Common Sense Media. (ม.ป.ป.). <em>Animal farm movie review</em>.
+                            <a href="https://www.commonsensemedia.org/movie-reviews/animal-farm"
+                                target="_blank">https://www.commonsensemedia.org/movie-reviews/animal-farm</a>
+                        </p>
+                    </li>
+                    <li class="credit-item">
+                        <b>7. รูปของ Old Major:</b>
+                        <p>IMDb. (ม.ป.ป.). <em>Animal Farm (1954) [ภาพ]</em>.
+                            <a href="https://www.imdb.com/title/tt0047834/mediaviewer/rm3176167168/"
+                                target="_blank">https://www.imdb.com/title/tt0047834/mediaviewer/rm3176167168/</a>
+                        </p>
+                    </li>
+                    <li class="credit-item">
+                        <b>8. รูปภาพ George Orwell:</b>
+                        <p>IMDb. (ม.ป.ป.). <em>George Orwell [ภาพบุคคล]</em>.
+                            <a href="https://www.imdb.com/name/nm0000567/"
+                                target="_blank">https://www.imdb.com/name/nm0000567/</a>
+                        </p>
+                    </li>
+                    <li class="credit-item">
+                        <b>9. รูป Stage 1:</b>
+                        <p>Henderson, R. (2014, 19 พฤศจิกายน). <em>Animal Farm remastered – A review</em>. Show Me The
+                            Animation.
+                            <a href="https://showmetheanimation.com/features/animal-farm-remastered-a-review/"
+                                target="_blank">https://showmetheanimation.com/features/animal-farm-remastered-a-review/</a>
+                        </p>
+                    </li>
+                    <li class="credit-item">
+                        <b>10. รูปของ Squealer:</b>
+                        <p>BBC Bitesize. (ม.ป.ป.). <em>Animal Farm: Squealer</em>. <a
+                                href="https://www.bbc.co.uk/bitesize/guides/zcb8p39/revision/7"
+                                target="_blank">https://www.bbc.co.uk/bitesize/guides/zcb8p39/revision/7</a>
+                        </p>
+                    </li>
+                    <li class="credit-item">
+                        <b>11. รูป Stage 2:</b>
+                        <p>BBC Bitesize. (ม.ป.ป.). <em>Animal Farm</em>. <a
+                                href="https://www.bbc.co.uk/bitesize/guides/zccjfrd/revision/4"
+                                target="_blank">https://www.bbc.co.uk/bitesize/guides/zccjfrd/revision/4</a>
+                        </p>
+                    </li>
+                    <li class="credit-item">
+                        <b>12. รูป Final:</b>
+                        <p>Moyers, B. (ม.ป.ป.). <em>Not all men are pigs, but the ones who are, are swine</em>.
+                            BillMoyers.com.
+                            <a href="https://billmoyers.com/story/not-all-men-are-pigs-but-the-ones-who-are-are-swine/"
+                                target="_blank">https://billmoyers.com/story/not-all-men-are-pigs-but-the-ones-who-are-are-swine/</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-sub modal-ok-btn" id="modalOkBtn">ปิดหน้าต่าง</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
